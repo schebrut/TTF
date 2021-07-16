@@ -1,0 +1,166 @@
+.header__content{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.header__content:before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rebeccapurple;
+  transform: scale(0.5);
+  transition: all 500ms;
+  z-index: 2;
+
+}
+.header__content.open:before{
+  height: 100%;
+  transform: scale(1);
+
+}
+
+.header__logo{
+  width: 90%;
+  padding: 10px 0 0 10px;
+}
+.header__logo img {
+  width: 100%;
+}
+
+.header__logo_content{
+padding: 20% 0 0 20px ;
+  h1{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .moscow{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .work__time{
+    font-size: 18px;
+  }
+  .wishes{
+    padding-bottom: 5px;
+    font-size: 16px;
+
+
+  }
+}
+.header__phones{
+  padding: 40px 0 0 0;
+  .phones{
+    font-weight: bold;
+    font-size: 18px;
+
+  }
+  .header__social{
+  img{
+    width: 40px;
+    padding: 25px 0 0 0;
+    margin: 0;
+  }
+    img:last-child{
+      margin: 0 10px 0 0 ;
+    }
+  }
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 10px 0  ;
+}
+
+.header__logo_menu_list{
+  display: flex;
+  padding-top: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.header__logo_menu_list li:last-child{
+  margin-left:  25px;
+}
+
+.header__search{
+  margin: 25px 0 0 0 ;
+  position: relative;
+  z-index: 1;
+
+
+  #serch_input{
+    font-size: 15px;
+    border-radius: 8px;
+    height: 40px;
+    background-color: rgba(184, 184, 184, 0.25);
+    text-indent: 35px;
+    border: solid 2px transparent;
+    transition: all 250ms;
+  }
+
+  #serch_input:hover{
+    border: solid 2px orange;
+    transition: all 250ms;
+    background: white;
+  }
+
+  .loupe{
+    position: absolute;
+    height:20px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+}
+
+#serch_input::-webkit-search-cancel-button {
+  padding-right: 5px;
+    }
+
+
+  .header__order{
+
+    display: block;
+
+    .header__busket_icone{
+      height: 80px;
+      width: 80px;
+      background-color: orange;
+      border-radius: 20%;
+      position: relative;
+      transition: all 400ms;
+      &:hover{
+        background-color: rgba(255, 165, 0, 0.62);
+
+      }
+    }
+
+
+
+
+    .header__busket_icone:after{
+      content: '';
+      background-image: url("../img/cart.svg");
+      background-repeat: no-repeat;
+      width: 60%;
+      height: 60%;
+      position: absolute;
+
+      top:17px;
+      left: 14px;
+    }
+
+    .header__busket_price{
+      font-weight: bold;
+      margin: 10px 0 0 5px ;
+    }
+  }
+

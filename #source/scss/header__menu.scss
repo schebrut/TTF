@@ -1,0 +1,27 @@
+.header__menu{
+
+  font-weight: bold;
+  font-size: 20px;
+  transform: translateY(-300px);
+  position: absolute;
+  z-index: 200;
+
+  a{
+    color: white;
+    z-index: 1;
+  }
+}
+.header__list li{
+ margin: 0 0 10px 0;
+}
+.header__menu.open{
+  display: block;
+  transform: translateY(0px);
+  position: absolute;
+  top: 160px;
+  left: 10%;
+  transition:  all 500ms  ease 300ms;
+  z-index: 3;
+
+}
+
